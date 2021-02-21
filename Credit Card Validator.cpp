@@ -20,7 +20,7 @@ int main()
             cardNum[i] = digit;
 
         }else{
-            cout << "Must be a number and less than 10. You are where you left off, try again.\n";
+            cout << "Must be a one digit number. You are where you left off, try again.\n";
             continue;
         }
     }
