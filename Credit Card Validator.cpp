@@ -10,7 +10,7 @@ int main()
     int sum = 0;
 
     // For loop iterates each inputted digit the user enters and assigned to its respective element in the array
-    cout << "Enter your credit card number.\n";
+    cout << "Enter each digit of your credit card number one by one and press enter after each digit.\n";
     for(int i = 1; i <= 16; i++)
     {
         cin >> digit;
