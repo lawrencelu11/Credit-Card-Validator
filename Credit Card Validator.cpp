@@ -2,15 +2,23 @@
 
 using namespace std;
 
+void validateCard(int (&cardNum)[16]);
+
 int main()
 {
 
     int cardNum[16]; // Array to store the 16 credit card digits
+    validateCard(cardNum); // Function that passes in the array that contains the digits and checks for validation.
+    return 0;
+}
+
+void validateCard(int (&cardNum)[16])
+{
     int digit, digit2, firstDig, secondDig, totalDig, checkSum;
     int sum = 0;
 
     // For loop iterates each inputted digit the user enters and assigned to its respective element in the array
-    cout << "Enter each digit of your credit card number one by one and press enter after each digit.\n";
+    cout << "Enter your credit card number.\n";
     for(int i = 1; i <= 16; i++)
     {
         cin >> digit;
@@ -20,7 +28,7 @@ int main()
             cardNum[i] = digit;
 
         }else{
-            cout << "Must be a one digit number. You are where you left off, try again.\n";
+            cout << "Must be a number and less than 10. You are where you left off, try again.\n";
             continue;
         }
     }
@@ -48,6 +56,4 @@ int main()
     }else{
         cout << "\nCredit card is not valid\n";
     }
-
-    return 0;
 }
