@@ -2,18 +2,17 @@
 
 using namespace std;
 
-void validateCard(int (&cardNum)[16]);
+void validateCard();
 
 int main()
 {
-
-    int cardNum[16]; // Array to store the 16 credit card digits
-    validateCard(cardNum); // Function that passes in the array that contains the digits and checks for validation.
+    validateCard();
     return 0;
 }
 
-void validateCard(int (&cardNum)[16])
+void validateCard()
 {
+    int cardNum[16];
     int digit, digit2, firstDig, secondDig, totalDig, checkSum;
     int sum = 0;
 
