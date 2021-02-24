@@ -97,7 +97,25 @@ void checkSum(int digits[16])
 
 void displayDigits(int digits[16])
 {
-    for(int i = 1; i <= 16; i++)
+    for(int i = 1; i <= 4; i++)
+    {
+        cout << digits[i];
+    }
+    cout << "-";
+    
+    for(int i = 5; i <= 8; i++)
+    {
+        cout << digits[i];
+    }
+    cout << "-";
+    
+    for(int i = 9; i <= 12; i++)
+    {
+        cout << digits[i];
+    }
+    cout << "-";
+    
+    for(int i = 13; i <= 16; i++)
     {
         cout << digits[i];
     }
