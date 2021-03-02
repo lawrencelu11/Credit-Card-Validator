@@ -11,7 +11,6 @@ void displayDigits(int digits[16]);
 int main()
 {
     int digits[16];
-    cout << "Enter each digit of your credit card number.\n";
     setDigits(digits);
     displayDigits(digits);
     getIssuer(digits);
@@ -21,20 +20,13 @@ int main()
 
 void setDigits(int digits[16])
 {
-    int digit;
-
-    for(int i = 1; i <= 16; i++)
+    long long digit;
+    cout << "Enter your credit card number: ";
+    cin >> digit;
+    for(int i = 16; i >= 1; i--)
     {
-        if(digit < 10)
-        {
-            cout << "Digit " << i << ": ";
-            cin >> digit;
-            digits[i] = digit;
-        }else{
-            cout << "Must be a one digit number.\n";
-            continue;
-        }
-
+        digits[i] = digit % 10;
+        digit /= 10;
     }
     cout << "\n";
 
