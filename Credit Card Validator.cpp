@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void setDigits(int digits[16]);
+void setDigits(int (&digits)[16]);
 void getIssuer(int digits[16]);
 void checkSum(int digits[16]);
 void displayDigits(int digits[16]);
@@ -18,7 +18,7 @@ int main()
     return 0;
 }
 
-void setDigits(int digits[16])
+void setDigits(int (&digits)[16])
 {
     long long digit;
     cout << "Enter your credit card number: ";
