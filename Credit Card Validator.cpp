@@ -3,10 +3,10 @@
 
 using namespace std;
 
-void setDigits(int (&digits)[16]);
-void getIssuer(int digits[16]);
-void checkSum(int digits[16]);
-void displayDigits(int digits[16]);
+void setDigits(int digits[]);
+void getIssuer(int digits[]);
+void checkSum(int digits[]);
+void displayDigits(int digits[]);
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
     return 0;
 }
 
-void setDigits(int (&digits)[16])
+void setDigits(int digits[])
 {
     long long digit;
     cout << "Enter your credit card number: ";
@@ -32,7 +32,7 @@ void setDigits(int (&digits)[16])
 
 }
 
-void getIssuer(int digits[16])
+void getIssuer(int digits[])
 {
     string cardIssuer = "";
 
@@ -62,7 +62,7 @@ void getIssuer(int digits[16])
     cout << "\n";
 }
 
-void checkSum(int digits[16])
+void checkSum(int digits[])
 {
     int newDigit, firstDigit, secondDigit, totalDigit, result, sum = 0;
     for(int i = 1; i <= 15; i+=2)
@@ -87,7 +87,7 @@ void checkSum(int digits[16])
     }
 }
 
-void displayDigits(int digits[16])
+void displayDigits(int digits[])
 {
     for(int i = 1; i <= 4; i++)
     {
